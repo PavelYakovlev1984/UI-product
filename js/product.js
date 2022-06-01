@@ -1,4 +1,22 @@
-const
+const products = document.querySelectorAll('.product');
+if(products) {
+  products.forEach(el => {
+    const imageSwitchItems = document.querySelectorAll('.image-switch__item');
+    const imagePagination = document.querySelector('.image-pagination');
+
+    if(imageSwitchItems.length > 1) {
+      let currentProduct = el;
+      imageSwitchItems.forEach((el, index) => {
+        el.setAttribute('data-index', index);
+        imagePagination.innerHTML += `<li class="image-pagination__item ${index == 0 ? 'image-pagination__item--active' : ''}" data-index="${index}"></li>`
+    el.addEventListener('mouseenter', (e) => {
+      currentProduct.querySelectorAll('.image-pagination__item').forEach(el => {
+        el.classList.remove('image-paganation__item--active')});
+    });
+      });
+    }
+  });
+}
 
 
 
