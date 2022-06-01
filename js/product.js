@@ -1,20 +1,4 @@
-const products = document.querySelector('.product');
-if (products) {
-  let currentProduct = el;
-  const imageSwitchItems = document.querySelectorAll('.image-switch__item');
-  const imagePagination = document.querySelector('.image-pagination');
-  if(imageSwitchItems.length > 1) {
-    imageSwitchItems.forEach((el, index) => {
-      el.setAttribute('data-index', index);
-      imagePagination.innerHTML += `<li class="image-pagination__item ${index == 0 ? 'image-pagination__item--active' : ''}" data-index="${index}"></li>`
-    });
-
-    el.addEventlistener('mouseenter', (e) => {
-
-    });
-  }
-
-}
+const
 
 
 
